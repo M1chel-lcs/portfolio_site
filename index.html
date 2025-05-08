@@ -7,27 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Michel Lucas</h1>
-        <p>Desenvolvedor de Sistemas</p>
+    <nav>
+        <div class="container">
+            <h1>Michel Lucas</h1>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h2>Bem-vindo ao meu portfólio</h2>
+            <p>Desenvolvedor de Sistemas apaixonado por transformar ideias em código.</p>
+        </div>
     </header>
 
-    <section class="about">
+    <section id="sobre" class="container section">
         <h2>Sobre Mim</h2>
-        <p>Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por tecnologia e em constante evolução. Aqui compartilho meus projetos e aprendizados.</p>
+        <p>Sou estudante de Análise e Desenvolvimento de Sistemas, curioso por natureza e sempre buscando aprender tecnologias novas. Este portfólio reúne meus projetos, aprendizados e desafios.</p>
     </section>
 
-    <section class="projects">
+    <section id="projetos" class="container section">
         <h2>Projetos</h2>
-        <ul>
-            <li><a href="https://github.com/M1chel-lcs/gerador_senhas" target="_blank">Gerador de Senhas</a></li>
-            <!-- Você pode adicionar mais projetos aqui -->
-        </ul>
+        <div class="cards">
+            <div class="card">
+                <h3>Gerador de Senhas</h3>
+                <p>Aplicação simples para gerar senhas seguras de forma aleatória.</p>
+                <a href="https://github.com/M1chel-lcs/gerador_senhas" target="_blank">Ver no GitHub</a>
+            </div>
+            <!-- Adicione mais cards de projeto aqui -->
+        </div>
     </section>
 
-    <section class="contact">
+    <section id="contato" class="container section">
         <h2>Contato</h2>
-        <p>Email: michel@example.com</p>
+        <p>Email: michellcs38@gmail.com</p>
         <p>GitHub: <a href="https://github.com/M1chel-lcs" target="_blank">M1chel-lcs</a></p>
     </section>
 
