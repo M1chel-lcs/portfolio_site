@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: gold;
+    text-align: center;
+}
+
+header {
+    padding: 50px 0;
+    border-bottom: 1px solid gold;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+a {
+    color: gold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 20px 0;
+    border-top: 1px solid gold;
+    font-size: 0.9em;
+}
