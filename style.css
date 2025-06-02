@@ -1,16 +1,16 @@
-/* Variáveis de cores e fontes */
+/* Variáveis de cores e fontes - Tema Escuro */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --light-color: #ecf0f1;
-    --dark-color: #2c3e50;
-    --text-color: #333;
-    --text-light: #7f8c8d;
+    --primary-color: #1a1a2e;
+    --secondary-color: #4cc9f0;
+    --accent-color: #f72585;
+    --light-color: #16213e;
+    --dark-color: #0f0f1b;
+    --text-color: #e6e6e6;
+    --text-light: #a1a1a1;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-heading: 'Montserrat', sans-serif;
     --transition: all 0.3s ease;
-    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     --border-radius: 8px;
 }
 
@@ -29,7 +29,7 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #f9f9f9;
+    background-color: var(--dark-color);
 }
 
 .container {
@@ -43,7 +43,7 @@ body {
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     margin-bottom: 1rem;
-    color: var(--dark-color);
+    color: var(--text-color);
     line-height: 1.2;
 }
 
@@ -53,6 +53,7 @@ h3 { font-size: 1.5rem; }
 
 p {
     margin-bottom: 1.5rem;
+    color: var(--text-light);
 }
 
 a {
@@ -74,7 +75,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav .container {
@@ -106,12 +107,12 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: var(--secondary-color);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--light-color));
     color: white;
     padding: 10rem 0 5rem;
     text-align: center;
@@ -141,6 +142,7 @@ nav ul li a:hover {
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
+    color: var(--secondary-color);
 }
 
 .section h2::after {
@@ -148,64 +150,73 @@ nav ul li a:hover {
     display: block;
     width: 80px;
     height: 4px;
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     margin: 1rem auto;
     border-radius: 2px;
 }
 
-/* Cards de Projetos */
+/* Cards de Projetos - Centralizados e com novo visual */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
     gap: 2rem;
     margin-top: 2rem;
+    justify-content: center;
 }
 
 .card {
-    background: white;
+    background: var(--primary-color);
     border-radius: var(--border-radius);
     padding: 2rem;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-color: var(--secondary-color);
 }
 
 .card h3 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
 .card p {
     color: var(--text-light);
     margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
 .card a {
     display: inline-block;
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: transparent;
+    color: var(--secondary-color);
     padding: 0.6rem 1.2rem;
     border-radius: var(--border-radius);
     font-weight: 500;
+    border: 1px solid var(--secondary-color);
+    align-self: flex-start;
+    transition: var(--transition);
 }
 
 .card a:hover {
-    background-color: var(--accent-color);
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* Seção de Contato */
 #contato {
-    background-color: var(--light-color);
+    background-color: var(--primary-color);
+    text-align: center;
 }
 
 #contato p {
-    text-align: center;
     margin-bottom: 1.5rem;
 }
 
@@ -215,11 +226,12 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 footer p {
@@ -284,3 +296,12 @@ footer p {
 .card:nth-child(2) { animation-delay: 0.2s; }
 .card:nth-child(3) { animation-delay: 0.3s; }
 .card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Efeito de gradiente nos títulos */
+h2 {
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
